@@ -1,0 +1,162 @@
+/*
+    File: scrabble.css
+    GUI Assignment: Creating a Modified Scrabble Game
+    Ethan Rosenbaum, UML Computer Science, ethan_rosenbaum@student.uml.edu
+
+    Copyright (c) 2023 by Ethan. All Rights reserved. May be
+    freely copied or excerpted for educational purposes with credit to the author.
+
+    Header taken from HW assignment 1 example by Wenjin Zhou.
+*/
+
+/* Global style rules */
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Background gradient from https://webgradients.com/ */
+html{
+    height: 100%;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    background-size: 100%;
+}
+
+body {
+    text-align: center;
+}
+
+header {
+    width: 80%;
+    text-align: center;
+    margin: 0px auto;
+}
+
+#gameboard {
+    margin: 0 auto;
+    width: 100%;
+    background-color: black;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+table {
+    margin: 50px auto;
+}
+
+/* Images for board-squares are taken from example one line in HW5 PDF. */
+.board-square {
+    background-image: url(../img/scrabble-basic-bg.PNG);
+    border: 2px solid black;
+    margin: 5px;
+    height: 75px;
+    width: 75px;
+    color:black;
+
+}
+
+.double-letter {
+    background-image: url(../img/scrabble-double-letter-bg.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.double-word {
+    background-image: url(../img/scrabble-double-word-bg.PNG);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#controlpanel, #scoreboard {
+    width: 100%;
+    text-align: center;
+    margin: 20px auto;
+}
+
+#scoreboard > #total-game-score {
+    float:left;
+    margin-left: 100px;
+    max-width: 300px;
+}
+/* https://stackoverflow.com/questions/56866411/css-prevent-div-from-moving-down */
+#total-game-score {
+    position: absolute;
+}
+
+#total-game-score > p{
+    font-size: larger;
+    font-weight: bold;
+}
+
+#scoreboard > #total-game-score th{
+    margin: 5px;
+    padding: 5px;
+    border-bottom: 3px;
+    border-style: solid;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+#scoreboard > #total-game-score td{
+    margin: 5px;
+    padding: 5px;
+    width: 50px;
+}
+
+
+#scoreboard > p {
+    border: 5px solid black;
+    width: 300px;
+    height: 75px;
+    text-align: center;
+    margin: 30px auto;
+    line-height: 50px;
+}
+
+
+#scoreboard > #current-board-word > span {
+    display: inline-block;
+    margin: 5px;
+    text-decoration: underline;
+    vertical-align: middle;
+    font-size: larger;
+    font-weight: 700;
+}
+
+button {
+    border: none;
+    font-size: 16px;
+    padding: 15px 32px;
+    color:white;
+    margin: 10px;
+}
+
+/* https://www.w3schools.com/howto/howto_css_animate_buttons.asp */
+button:active {
+    transform: translateY(4px);
+}
+
+#reset {
+    background-color: red;
+}
+
+#submit {
+    background-color: blue;
+}
+
+
+/* Tile rack image provided by Wenjin Zhou */
+#tilerack {
+    display: inline-block;
+    background-image: url(../img/scrabble-tile-holder-406774_640.png);
+    background-repeat: none;
+    width: 640px;
+    height: 182px;
+}
+
+#tilerack > .tile {
+    display: inline-block;
+    margin-top: 50px;
+    margin-right: 20px;
+}

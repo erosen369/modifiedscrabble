@@ -1,0 +1,81 @@
+<!--
+    File: index.html
+    GUI Assignment: Creating a Modified Scrabble Game
+    Ethan Rosenbaum, UML Computer Science, ethan_rosenbaum@student.uml.edu
+
+    Copyright (c) 2023 by Ethan. All Rights reserved. May be
+    freely copied or excerpted for educational purposes with credit to the author.
+
+    Header taken from HW assignment 1 example by Wenjin Zhou.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="css/scrabble.css">
+        <title>Scrabble</title>
+    </head>
+    <body>
+
+        <header>
+            <h1>Modified Scrabble</h1>
+            <p>Ethan Rosenbaum</p>
+            <p>Homework 5 GUI 46.210</p>
+            <p>
+                Drag tiles to place on the board. Tiles may not be moved once placed.<br> 
+                No gaps are permitted between tiles.<br>
+                Use the 'Submit' button to record your current board.<br>
+                
+
+                The game may be reset at any time using the 'New Game' button.
+            </p>
+        </header>
+
+        <div id="gameboard">
+        </div>
+        
+        <!-- contains scoring information -->
+        <div id="scoreboard">
+
+            <!-- Scoring information for the game -->
+            <div id="total-game-score">
+                <p id="total-game-score-rem-tiles"></p>
+                <p id="total-game-score-sum">Total Points: 0</p>
+                <table>
+                    <tr>
+                        <th>Submission</th>
+                        <th>Score</th>
+                    </tr>
+                </table>
+                
+            </div>
+
+            <!-- Scoring information for the current board -->
+            <p id="current-board-score"></p>
+            <p id="current-board-word"></p>
+        </div>
+
+        <!-- Buttons for user interaction -->
+        <div id="controlpanel">
+            <button type="button" id="submit">Submit</button>
+            <button type="button" id="reset">New Game</button>
+        </div>
+
+        <!-- Location for player tiles -->
+        <div id="tilerack">
+        </div>
+
+        <footer>
+        </footer>
+
+        <!-- Javascript CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+        <script src="js/scrabble.js"></script>
+        
+    </body>
+</html>
